@@ -91,9 +91,9 @@ li:hover {
 
 
 .grid-12 {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: flex-start;
+    display: flex;
+    
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -104,12 +104,13 @@ li:hover {
     background-size: cover;
 }*/
 .left {
-    grid-column: span 5;
-    height: 900px;
+    
+    height: 100vh;
     background-image: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 0 120px;
 }
 
 .photo {
@@ -122,15 +123,15 @@ li:hover {
   
 }
 
-.middle {
+/*.middle {
     grid-column: span 1;
     height: 900px;
     display: flex;
 }
-
+*/
 
 .right {
-    grid-column: span 5;
+    /* grid-column: span 5; */
     height: 900px;
     display: flex;
     background-image: none;
@@ -138,6 +139,7 @@ li:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 0 50px;
 }
 
 .arrow:hover {
@@ -311,3 +313,15 @@ footer {
     align-items: center;
     background-color: #F3F4F6;
 }
+
+@media only screen and (max-width: 600px) {
+    /* body {
+      background-color: lightblue;
+    } */
+  .grid-12 {
+      flex-direction: column;
+      justify-content: flex-start;
+  }
+
+}
+  
